@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <aside class="sidebar">
+      <header class="nav-header">
+        <h3>CODE</h3>
+        <button class="close-btn">
+          <span><i class="fa-solid fa-xmark"></i></span>
+        </button>
+      </header>
+      <ul class="links">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Projects</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </aside>
+
+    <div class="menu-btn">
+      <button>
+        <span><i class="fa-solid fa-bars"></i></span>
+      </button>
+    </div>
+
+    <script>
+      let sidebar = document.querySelector('.sidebar')
+      let menuBtn = document.querySelector('.menu-btn')
+      let closeBtn = document.querySelector('.close-btn')
+
+      menuBtn.addEventListener('click', function () {
+        sidebar.classList.add('showSidebar')
+        this.classList.add('hidden-btn')
+      })
+
+      closeBtn.addEventListener('click', function () {
+        sidebar.classList.remove('showSidebar')
+        menuBtn.classList.remove('hidden-btn')
+      })
+    </script>
+  </body>
+</html>
